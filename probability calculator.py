@@ -43,9 +43,9 @@ def main():
     sums, total = calculate_totals(amount)
     amount_to_space = create_dictionary(sums)
     sums.sort(reverse=True)
-    print(f'\nAfter calculating all the possibilities for {turns} turns\nThe results are:\n\t\tTotal: {total:>108,}')
+    print(f'\nAfter calculating all the possibilities for {turns} turns\nThe results are:\n\t\tTotal: {total:>{(len(str(total)) * 4 // 3) + 8},}')
     for s in sums:
-        print(f'Space: {amount_to_space[s]}\tpossibilities: {s:>100,}')
+        print(f'Space: {amount_to_space[s]:>2}\tpossibilities: {s:>{len(str(total)) * 4 // 3},}')
             
     
 
